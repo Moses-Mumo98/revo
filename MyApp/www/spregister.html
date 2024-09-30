@@ -1,0 +1,233 @@
+<div data-page="spregister" class="page ">
+  <div class="navbar header">
+    <div class="navbar-inner">
+      <div class="center sliding" id='destroy'>REVO</div>
+      </div>
+  </div>
+  <div class="page-content hide-bars-on-scroll" >
+   <!--  <div class="loginsimag row"><img  src="img/icon.png" alt=""></div> -->
+      <div class="clear"></div>
+       <form id="regForm" class="store-data">
+	   <input type="hidden" name="regType" id="regType"/>
+	   <input type="hidden" name="action" value="register"/>
+	   <input type="hidden" name="Iam" value="company">
+	   <input type="hidden" name="is_branch" value="0">
+	   <input type="hidden" name="geoname" value="0">
+	   <input type="hidden" name="lat" value="0">
+	   <input type="hidden" name="lang" value="0">
+      <div class="list-block">
+        <ul>
+          <li class='step1'>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title  label"><h2>Your Phone No.</h2></div>
+                <div class="item-input">
+                  <input id="phone" type="tel" name="phone" placeholder="+2547000000" style="text-align:center"/>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li  class='step2'>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label"><h2>Passcode</h2></div>
+                <div class="item-input">
+                  <input type="text" id="passcode" name="passcode" placeholder="" style="text-align:center"/>
+                </div>
+              </div>
+            </div>
+		</li>
+		<li  class='step3'>
+		  <div class=""><h2>Are you IRA registered?</h2></div>
+            <div class="list-block">
+				  <ul>
+					
+					<li class='step_in3'>
+					  <label class="label-radio item-content">
+						<!-- Checked by default -->
+						<input type="radio" name="IRA" value="1" checked="checked">
+						<div class="item-media">
+						  <i class="icon icon-form-radio"></i>
+						</div>
+						<div class="item-inner" style="display:flex">
+						  <div class="item-title">Yes</div>
+						</div>
+					  </label>
+					</li>
+					<li class='step_in3 othersOpt' role="selector" smart="others-select">
+					  <label class="label-radio item-content">
+						<!-- Checked by default -->
+						<input type="radio" name="IRA" value="0" role="selectorV" >
+						<div class="item-media">
+						  <i class="icon icon-form-radio"></i>
+						</div>
+						<div class="item-inner" style="display:flex">
+						  <div class="item-title" >No <span id="chosenOther"></span></div>
+						</div>
+					  </label>
+					</li>
+					<li class="hidden">
+					<!-- select -->
+					<a href="#" class="item-link smart-select others-select" data-back-on-select="true" data-searchbar="true" data-searchbar-placeholder="Other Users">
+						
+						<select name="interType" id="interType">
+						
+							
+						 
+						  <option value="Assesor" >Assesor</option>
+
+						  <option value="Loss Adjuster" >Loss Adjuster</option>
+
+						  <option value="Valuer">Valuer</option>
+
+						  <option value="Investigator">Investigator</option>
+
+						  <option value="Lawyer">lawyer</option>
+
+						  <option value="Garage">Garage</option> 
+
+
+						</select>
+						<label class="label-radio item-content">
+						
+						<div class="item-media"><i class="icon icon-form-radio"></i></div>
+						  <div class="item-inner">
+							<!-- Select label -->
+							<label class="item-title"  style=' float:left'>Others:</label>
+
+							 <div class="item-after">Select..</div>
+							<!-- Selected value, not required -->
+							
+						</div>
+						</label>
+							</a>
+						
+					 
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class='step4'>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label "><h2><span id="aki_suffix">IRA</span> No.</h2></div>
+                <div class="item-input">
+                  <input type="text" name="AKI" id="aki" placeholder=""  style="text-align:center"/>
+                </div>
+              </div>
+            </div>
+          </li>
+		
+		  <li class='step5'>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label "><h2><span id="namePrefix"></span>Name <span id="name_suffix"></span></h2></div>
+                <div class="item-input">
+                  <input type="text" name="fname" id="fname" placeholder=""  style="text-align:center"/>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class='step6'>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label "><h2>Email</h2></div>
+                <div class="item-input">
+                  <input type="email" name="email" id="email" placeholder=""  style="text-align:center"/>
+                </div>
+              </div>
+            </div>
+          </li>
+       
+          <li class='step7' >
+		 
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label "><h2>Location</h2></div>
+                <div class="item-input">
+                  <input type="text" name="location" id="map-auto" placeholder=""  style="text-align:center"/>
+                </div>
+              </div>
+            </div>
+			 <div id="map" style="display:absolute, height:50%"></div>
+          </li>
+       
+          <li class='step10' >
+		 
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label "><h2>Revo code issued to your HQ</h2></div>
+                <div class="item-input">
+                  <input type="text" name="revocode" id="RevoCode" placeholder="Enter revo code"  style="text-align:center"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        
+         
+          
+        
+          <li class="step8">
+		  <label class="label-checkbox item-content">
+			
+			
+			<div class="item-inner">
+			 
+			  
+			  <div class="card" style="background: inherit; box-shadow: inherit;">
+				
+				<div class="card-content">
+					<div class="card-content-inner">
+						Read our <a href="#">Terms and Conditions </a><p> Do you accept our terms and conditions?</p>
+					</div>
+				</div>
+				
+			</div> 
+			  
+			  
+			</div>
+		  </label>
+    </li>
+	
+	 <li class="step9">
+		  <label class="label-checkbox item-content">
+			
+			
+			<div class="item-inner">
+			 
+			  
+			  <div class="card" style="background: inherit; box-shadow: inherit;">
+				
+				<div class="card-content">
+					<div class="card-content-inner">
+						Thank you<p> Please wait as we process <h1 class="fa fa-smile"></h1></p>
+					</div>
+				</div>
+				
+			</div> 
+			  
+			  
+			</div>
+		  </label>
+    </li>
+	
+        </ul>
+      </div>
+      </form>
+      <div class="content-block">
+        <div class="list-block-label" style="text-align:right; position:relative; z-index:1020"><span id="gonext" step="2"> <span id='gonextlabel'>NEXT</span>&nbsp;<i class="fa fa-arrow-circle-right"></i></span></div>
+        <div class="list-block-label" style="text-align:right;  position:relative; z-index:1020"><span id="gorefresh" class="hidden" > <span id='gonextlabel'>Re-send</span>&nbsp;<i class="fa fa-sync"></i></span></div>
+      </div>
+      
+      <br><br><br>
+      <div class="buttonbar row no-gutter">
+	  <div class="content-block col-100">
+        <div class="list-block-label" style="text-align:right"><small id="nonext" style="display:none"> Skip Registration&nbsp;<i class="fa fa-skating"></i></small></div>
+      </div>
+            <!-- <a href="sign-in.html" class=" button  color2 col-100">Sign Up</a> -->
+      </div>
+      
+
+  </div>
+</div>

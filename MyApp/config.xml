@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.myapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Revo</name>
+    <description>An Insurance aggregator and shopping APP</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+      Ajab Consulting
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <icon src="www/img/revoPNG.jpg"/>
+    
+  
+ <platform name="android">
+    <!-- Use preference to define the splash screen with SVG -->
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="www/img/revoPNG.svg" />
+    <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashScreenDelay" value="3000" /> <!-- 3 seconds -->
+    <preference name="FadeSplashScreenDuration" value="500" />
+</platform>
+
+
+
+    <platform name="ios">
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+    </platform>
+
+</widget>

@@ -1,0 +1,176 @@
+<div data-page="requests" class="page navbar-fixed">
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left sliding"><a href="home.html" class="back link"><i class="icon icon-back"></i></a></div>
+      <div class="center "> Request Service </div>
+      <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+    </div>
+  </div>
+  <div class="page-content hide-bars-on-scroll" style="background: #e3dde4;">
+		  <div class="center content-block " style="
+												background: #fff;
+												/* border-top-right-radius: 50px; */
+												border-bottom-left-radius: 50px;
+												margin-top: -19px;
+												    padding-bottom: 10px;
+											"
+			>
+          <h1 style="margin-bottom:-10px">Ask for Insurance</h1>
+          <small style="margin-left:30%">Answer a few questions and we will contact all agents/insurance companies within your radius</small>
+      </div>
+	        
+
+    <div class="col-100">
+        <form id="contact" name="contact" method="post"> 
+		<input type='hidden' name="action" value="step1"/>
+		<input type='hidden' name="uid" value="" id="rquid"/>
+
+	   <input type="hidden" name="lat" id="latContact"/>
+	   <input type="hidden" name="lang" id="longContact"/>			
+              <div class="list-block inputs-list">
+                <ul>
+                    <li class="form1 ">
+					  <!-- Additional "smart-select" class -->
+					  <a href="#" class="item-link smart-select" data-searchbar="true" data-searchbar-placeholder="Search packages" data-back-on-select="true">
+						<!-- select -->
+						<select name="package" id="package">
+						 
+						  
+						</select>
+						<div class="item-content">
+						<div class="item-media"><i class="fa fa-seedling " style="color: #06b10d;  font-size:4em"></i></div>
+						  <div class="item-inner">
+							<!-- Select label -->
+							<label class="item-title floating-label"  style=' color:#848080;'>What Do you want to insure?</label>
+
+							
+							<!-- Selected value, not required -->
+							<div  class="item-after"></div>
+						  </div>
+						</div>
+					  </a>
+					  <hr/>
+					</li> <li class="form2 hidden">
+					  <!-- Additional "smart-select" class -->
+					  <a href="#" class="item-link smart-select " data-searchbar="true" data-searchbar-placeholder="Search Policies" data-back-on-select="true">
+						<!-- select -->
+						<select name="policyType" id="policyType">
+						 
+						  
+						</select>
+						<div class="item-content">
+						<div class="item-media"><i class="fa fa-carrot " style="color: #06b10d;  font-size:4em"></i></div>
+						  <div class="item-inner">
+							<!-- Select label -->
+							<label class="item-title floating-label"  style=' color:#848080;'>What kind of<span id="selPack"></span>Insurance?</label>
+
+							
+							<!-- Selected value, not required -->
+							<div  class="item-after"></div>
+						  </div>
+						</div>
+					  </a>
+					  <hr/>
+					</li> 
+					
+                  <li class="hidden">
+					 <div class="item-content">
+                      <div class="item-media"><i class="fa fa-pills" style="color: #5f096e; font-size:4em"></i></div>
+                      <div class="item-inner">
+                        <label class="item-title floating-label"  style=' color:#848080;'>Who should we contact?</label>
+				   <div class="row no-gutter">
+                                          
+                        <label class="label-radio item-content col-50 othersOptx" role="selector" smart="brokers-select">
+						<input type="radio"  name="Iam" value="2" checked>
+						<div class="item-media"  style=' min-width:23px;'>
+						  <i class="icon icon-form-radio"></i>
+						</div>
+						<div class="item-inner" style="display:flex; margin-left:1px; padding-right:1px;  min-width:23px;">
+						  <div class="item-text">Broker/Agent</div>
+						</div>
+					  </label>
+					  <a href="#" class="smart-select brokers-select hidden" data-back-on-select="true" data-searchbar="true" data-searchbar-placeholder="Brokers/Agents">
+						
+						
+					
+							</a>
+                                   
+                        <label class="label-radio item-content col-50 othersOpt" role="selector" smart="insurance-select">
+						<input type="radio"  name="Iam" value="3">
+						<div class="item-media" style=' min-width:23px;'>
+						  <i class="icon icon-form-radio"></i>
+						</div>
+						<div class="item-inner" style="display:flex; margin-left:1px; padding-right:1px;">
+						  <div class="item-text" id="mycompany">Insurance Company</div>
+						</div>
+					  </label>
+					  <a href="#" class="smart-select insurance-select hidden" data-back-on-select="true" data-searchbar="true" data-searchbar-placeholder="Insurances">
+						
+						<select name="compType" id="compType">
+						
+						 
+
+						</select>
+					
+							</a>
+                     
+                   </div>
+                   </div>
+                   </div>
+                    <hr/>
+					
+                  </li>
+                 <li class="hidden form2">
+				  <div class="item-content">
+					<div class="item-media"><i class="fa fa-podcast" style="color: #06b10d;  font-size:4em" ></i></div>
+					<div class="item-inner">
+					<div class="item-title-row">
+                        <label class="item-title floating-label" style=' color:#848080;'>How far should we look?</label>
+						<small class="item-after">Within&nbsp;<span id="kmr">10</span>km</small>
+					</div>
+					  <div class="item-input">
+						<div class="range-slider">
+						  <input name="kmr" id="kmr_s" type="range" min="0" max="100" value="10" step="0.1">
+						</div>
+					  </div>
+					</div>
+				  </div>
+				   <hr/>
+				   <li id='handle'  >
+						
+					</li>
+				</li>
+                  <li class="form2 hidden">
+				                <div class="content-block col-100 " style="float:right"> 
+									<button id="submit" 
+											type="submit" 
+											name="submit" 
+											value="Send" 
+											class="button " 
+											style="	color: #5f096e;
+													background: #ffffff; 
+													border-radius:50px; 
+													font-weight: 900;
+													border: solid 1px #acacac;
+												" >
+										Get Insurance &raquo;
+									</button> 
+								</div>
+
+				  </li>
+                    
+                </ul>
+              </div>
+        </form>
+           
+        
+        
+    </div>
+   
+
+    
+</div>
+</div>
+
+
